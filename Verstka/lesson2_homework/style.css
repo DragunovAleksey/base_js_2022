@@ -2,23 +2,25 @@
 body{
     background-color: #E5E5E5;
     width: 1920px;
+    
 }
 .container{
-    background-color: #FFFFFF;
+    background-color: #FFFFFF;    
 }
+
 header {
     height: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    }
+    
+}
 .bestbouquets{
     height: 80px;
     text-align: center;
-    font-style: normal;
-    font-weight: 600;
     font-size: 40px;
-    line-height: 49px;
+    font-weight: 600;
+    
 }
 .main-bouquets-list{
     display: flex;
@@ -27,16 +29,22 @@ header {
 .bouquet{
     width: 300px;
     text-align: center;
-
 }
 .bouquetname{
     font-weight:bold;
 }
 .speech{
-    
+    /* background-color: rgb(24, 148, 20); */
+    border-top: 1px solid #FFB5B5;
+    border-bottom: 1px solid #FFB5B5;
+    margin:0 25% 0 25%;
+    width: 1137.5px;  
     display: flex;
-    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    height: 283px;
     text-align: center;
+    font-family: Montserrat, sans-serif;
     font-style: italic;
     font-weight: 300;
     font-size: 32px;
@@ -45,12 +53,27 @@ header {
 }
 
 .main-section{
+    /* background-color: aqua; */
+    height: 441px;
+    /* width:900px; */
     display: flex;
     justify-content: center;
     align-items: center;
     }
-.main-section-item{
+.main-section-itemA{
+    /* background-color: bisque; */ 
+    text-align:left;
+    font-size: 23px;
     width: 450px;
+    height: 280px;
+}
+.main-section-itemB{
+    /* background-color: rgb(49, 30, 6); */ 
+    display: flex;
+    justify-content:flex-end;
+    width: 500px;
+    height: 280px;
+    margin: 0, 0, 0, 50px;
 }
 footer{
     display: flex;
@@ -58,5 +81,7 @@ footer{
     align-items: center;
     background-color: #FFB5B5;
     height: 80px;
-    
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
 }
