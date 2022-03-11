@@ -1,0 +1,110 @@
+/* общие стили */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .container {
+    width: 1140px;
+    margin: 0 auto;
+  }
+  .btn {
+      width: 200px;
+      height: 55px;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 3px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+  }
+  .btn-primary {
+      background-color: #3A95FF;
+      color: #fff;
+  }
+  .btn-secondary {
+      border: 1px solid #3A95FF;
+      color: #3A95FF;
+  }
+  /* стили хэдера */
+  .header-top {
+    border: 1px solid #dedede;
+  }
+  .header-top-info {
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-menu {
+    width: 945px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .top-menu-list {
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: space-between;
+  }
+  .top-menu-list a {
+    color: #424242;
+  }
+  .top-menu-list-left {
+    width: 352px;
+  }
+  .top-menu-list-left a {
+    text-decoration: none;
+  }
+  .top-menu-list-right {
+    width: 340px;
+  }
+  .list-blue {
+    color: #3a95ff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .list-blue1 a {
+    text-decoration: none;
+  }
+  .main-menu-list {
+    height: 73px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-menu-list a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #424242;
+  }
+  
+  /* стили баннера */
+  .main-banner {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  .main-banner-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .banner-offer-text {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 110%;
+    color: #212121;
+    margin-bottom: 63px;
+  }
+  .banner-buttons {
+      display: flex;
+      justify-content: space-between;
+  }
+  /* Лучшие предложения */
+  
