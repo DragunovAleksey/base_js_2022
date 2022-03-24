@@ -8,16 +8,16 @@ console.log (getPalindrom("арбуз у зубра")) */
 
 // 1.Сделайте функцию, которая возвращает квадрат числа. Число передается параметром.
 
-/* function getKvadrat (num) {
+ function getKvadrat (num) {
     if (typeof num === "number"){
     let result = num ** 2
-    console.log(result)    
+    return result    
     }
     else {
     console.log( num + " - Это не число!")
 };
 }
-getKvadrat(135) */
+console.log(getKvadrat("fff")) 
 
 //Сделайте функцию, которая возвращает сумму двух чисел.
 
@@ -34,7 +34,7 @@ sumOfTwo("sss",3) */
 
 //3. Сделайте функцию, которая отнимает от первого числа второе и делит на третье.
 
- function getResultOfThree (a, b, c) {
+/*  function getResultOfThree (a, b, c) {
     if(typeof a === "number" && typeof b === "number" && typeof c === "number"){
     let result = (a - b)/c;    
     console.log(result);
@@ -43,5 +43,5 @@ sumOfTwo("sss",3) */
         console.log("Где-то ввели не число!")
     }
     }
-    getResultOfThree(10,4,4) 
+    getResultOfThree(10,4,4)  */
 
