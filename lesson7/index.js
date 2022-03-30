@@ -17,11 +17,20 @@
  
 myFirstFunc(1,2,22,"20",5 ,-44,37 ,55, 43n,98,76888);  */
 
+//Функция принимаеи массив чисел, убирает повторяющиеся значения и возвращает новый массив из оставшихся значений
 
-let mySecondFunc = function (...args)  {
-	
-    let filteredArr = args.filter((elem) => elem === parseInt(elem));
-    console.table(filteredArr);
+/* let testArr = [1,2,3,4,6,6,6,6,5,6,7,8]
+let mySecondFunc = function (...array) {
+    let endArr = array.filter((element, index) => {
+    return array.indexOf(element) === index;
+    })
+    console.log(endArr);
 }
 
-mySecondFunc(1,2,22,"20",5, 33, 33, 33,-44,37 ,55, true, 43n,98, 55, 76888);
+mySecondFunc(testArr); */
+let chars = ['A', 'B', 'A', 'C', 'B'];
+let uniqueChars = chars.filter((element, index) => {
+    return chars.indexOf(element) === index;
+});
+console.log(uniqueChars);
+https://techrocks.ru/2021/09/12/how-to-remove-duplicates-in-an-array-in-js/
