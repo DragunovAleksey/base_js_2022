@@ -157,3 +157,11 @@ const calcValue = (a, b) => {
 const result = calcValue(3,5); */
 
 
+function squareSum(numbers){
+    console.log(numbers);
+    // let sum = 0
+    // let sqware = Math.pow(numbers,2)
+    // sum += sqware
+    // return sum
+    }
+    console.log(squareSum(234));
