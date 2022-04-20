@@ -177,93 +177,93 @@
 
 //Практика
 
-// class People {
-//     constructor(props) {
-//         this.name = props.name;
-//         this.surname = props.surname;
-//     }
-//     getFullName() {
-//         console.log(`Полное имя: ${this.name} ${this.surname}`);
-//     };
-// };
-
-// class Worker extends People {
-//     constructor(props) {
-//         super(props);
-//         this.rate = props.rate;
-//         this.day = props.day;
-//     };
-//     getSalary() {
-//         console.log(`Стоимость работ: ${this.day*this.rate}`)
-//     };
-// };
-
-// const jsCoder = new Worker({
-//     name: "Vasya",
-//     surname: "Sidorov",
-//     rate: 127,
-//     day: 5
-// });
-
-// console.log(jsCoder);
-// jsCoder.getSalary();
-// jsCoder.getFullName();
-
-//Пример работы с DOM-деревом
-console.log(document);
-class Component {
-    constructor(selector) {
-        this.$el = document.querySelector(selector)
+class People {
+    constructor(props) {
+        this.name = props.name;
+        this.surname = props.surname;
     }
+    getFullName() {
+        console.log(`Полное имя: ${this.name} ${this.surname}`);
+    };
+};
 
-    hide() {
-        this.$el.style.display = "none"
-    }
+class Worker extends People {
+    constructor(props) {
+        super(props);
+        this.rate = props.rate;
+        this.day = props.day;
+    };
+    getSalary() {
+        console.log(`Стоимость работ: ${this.day*this.rate}`)
+    };
+};
 
-    show() {
-        this.$el.style.display = "block"
-    }
-}
-
-class Box extends Component {
-    constructor(options) {
-        super(options.selector);
-        this.$el.style.width = this.$el.style.height = options.size + "px";
-        this.$el.style.background = options.color;
-    }
-}
-
-const box1 = new Box({
-    selector: "#box1",
-    size: 100,
-    color: "red",
+const jsCoder = new Worker({
+    name: "Vasya",
+    surname: "Sidorov",
+    rate: 127,
+    day: 5
 });
 
-const box2 = new Box({
-    selector: "#box2",
-    size: 80,
-    color: "blue",
-})
+console.log(jsCoder);
+jsCoder.getSalary();
+jsCoder.getFullName();
+
+//Пример работы с DOM-деревом
+// console.log(document);
+// class Component {
+//     constructor(selector) {
+//         this.$el = document.querySelector(selector)
+//     }
+
+//     hide() {
+//         this.$el.style.display = "none"
+//     }
+
+//     show() {
+//         this.$el.style.display = "block"
+//     }
+// }
+
+// class Box extends Component {
+//     constructor(options) {
+//         super(options.selector);
+//         this.$el.style.width = this.$el.style.height = options.size + "px";
+//         this.$el.style.background = options.color;
+//     }
+// }
+
+// const box1 = new Box({
+//     selector: "#box1",
+//     size: 100,
+//     color: "red",
+// });
+
+// const box2 = new Box({
+//     selector: "#box2",
+//     size: 80,
+//     color: "blue",
+// })
 
 
-class Circle extends Box {
-    constructor(options) {
-        super(options);
-        this.$el.style.borderRadius = "50%";
-    }
-}
+// class Circle extends Box {
+//     constructor(options) {
+//         super(options);
+//         this.$el.style.borderRadius = "50%";
+//     }
+// }
 
-const myCircle = new Circle({
-    selector: "#circle",
-    size: 70,
-    color: "green"
-})
-
-
+// const myCircle = new Circle({
+//     selector: "#circle",
+//     size: 70,
+//     color: "green"
+// })
 
 
-box1.hide();
-box1.show();
+
+
+// box1.hide();
+// box1.show();
 
 
 
