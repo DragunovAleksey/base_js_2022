@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // console.log(navigator.userAgent);
 // console.log(navigator.platform);
 
@@ -252,7 +251,6 @@
 // console.log(document.getElementsByTagName("div"));
 
 // console.log(document.querySelectorAll("div"));
-=======
 // //DOM
 // //Возможности браузера
 // console.log(window.navigator);
@@ -300,12 +298,10 @@
 //.getElementsBy* ищет все элементы по *TagName, *ClassName, *Name и возвращает их коллекцию
 //console.log(document.getElementsByTagName("div"));
 //Перебор элементов коллекции только циклом for_of_ чтобы итерироваться только по элементам
->>>>>>> 2a06747d28102b8d3fc4b365e0079e40afe44827
 
 // const link = document.querySelector("a");
 // const input = document.querySelector("input");
 
-<<<<<<< HEAD
 // console.log(input);
 
 // console.log((document.body.innerHTML += "123"));
@@ -329,7 +325,6 @@
 
 // const header = document.createElement("header");
 // header.className = "page-header";
-=======
 // console.log(link);
 // console.log(input);
 
@@ -366,13 +361,11 @@
 // //==========присвоили ему класс===============
 // header.className = "page-header";
 // //==========написали стили(лучше в CSS, здесь для примера)===============
->>>>>>> 2a06747d28102b8d3fc4b365e0079e40afe44827
 // header.style.background = "yellow";
 // header.style.height = "60px";
 // header.style.display = "flex";
 // header.style.justifyContent = "center";
 // header.style.alignItems = "center";
-<<<<<<< HEAD
 // header.innerHTML = "Это шапка сайта";
 // document.body.prepend(header);
 
@@ -415,7 +408,6 @@ for (let i = 1; i <= 5 ; i++) {
     newLi.innerText = `Пункт ${i}`;
     newUl.append(newLi);
 }
-=======
 // //==========Создали текст(можно и до стилей)===============
 // header.innerHTML = "Это шапка сайта";
 // //==========И в конце добавили(заинжектили) элемент на страницу в нужное место===============
@@ -473,4 +465,3 @@ for(let i = 1; i <= 15; i++) {
 
 
 
->>>>>>> 2a06747d28102b8d3fc4b365e0079e40afe44827
