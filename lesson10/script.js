@@ -266,14 +266,13 @@
 // console.log(document)//открывает структуру HTML-документа
 // //Каждый тег представляет собой объект с которым можно взаимодействовать
 
-
 //Навигация по элементам DOM
 // console.log(document.head)//Например обращение к тегу <head>
 
 // const any = document.querySelector("div");//Например найдет первый элемент div в документе
 //const block2 = document.querySelector("#block-2");//Находит первый элемент с id="block-2"
 //const block2 = document.querySelector(".block-2 .paragraph-2");//находит первый элемент с классом paragraph-2, который вложен в элемент с классом block-2
-// const block2 = document.querySelector(".block-2");//находит первый элемент с классом block-2 
+// const block2 = document.querySelector(".block-2");//находит первый элемент с классом block-2
 // console.log(block2)
 // console.log(block2.parentElement)//Находит тег-родитель для указанного
 // console.log(block2.previousElementSibling)//Находит предыдущий элемент-тэг на том же уровне вложенности
@@ -288,7 +287,7 @@
 // const any = document.querySelector("div");//Например найдет первый элемент div в документе
 //const block2 = document.querySelector("#block-2");//Находит первый элемент с id="block-2"
 //const block2 = document.querySelector(".block-2 .paragraph-2");//находит первый элемент с классом paragraph-2, который вложен в элемент с классом block-2
-// const block2 = document.querySelector(".block-2");//находит первый элемент с классом block-2 
+// const block2 = document.querySelector(".block-2");//находит первый элемент с классом block-2
 // const any = document.querySelectorAll("div")//Находит все указанные элементы, не только первый. Вернет их в виде Nodelist(это тоже коллекция)
 //document.querySelectorAll("div")[1]//Можно также обратиться по ключу элемента в коллекции
 
@@ -327,7 +326,6 @@
 // header.className = "page-header";
 // console.log(link);
 // console.log(input);
-
 
 // innerHTML
 // console.log(document.body.innerHTML);// Выведет всё содержимое в виде строки
@@ -369,45 +367,44 @@
 // header.innerHTML = "Это шапка сайта";
 // document.body.prepend(header);
 
-
 //Практика
 
-//Header
-const header = document.createElement("header");
-header.innerHTML = "Это заголовок страницы";
-document.body.prepend(header);
+// //Header
+// const header = document.createElement("header");
+// header.innerHTML = "Это заголовок страницы";
+// document.body.prepend(header);
 
-//Section
+// //Section
 
-const section = document.createElement("section")
-section.className = "page-section";
-header.after(section);
+// const section = document.createElement("section")
+// section.className = "page-section";
+// header.after(section);
 
-//Input
+// //Input
 
-const input = document.createElement("input");
-section.prepend("input");
+// const input = document.createElement("input");
+// section.prepend("input");
 
-//Button
-const button = document.createElement("button");
-button.className = "todos-button";
-button.innerText = "Add Todo";
-input.after(button);
+// //Button
+// const button = document.createElement("button");
+// button.className = "todos-button";
+// button.innerText = "Add Todo";
+// input.after(button);
 
-//Todos list
+// //Todos list
 
-const newUl = document.createElement("ul");
-newUl.className = "todos-list";
-button.after(newUl);
+// const newUl = document.createElement("ul");
+// newUl.className = "todos-list";
+// button.after(newUl);
 
-//Todos items
+// //Todos items
 
-for (let i = 1; i <= 5 ; i++) {
-    const newLi = document.createElement("li");
-    newLi.className = "todos-list_item";
-    newLi.innerText = `Пункт ${i}`;
-    newUl.append(newLi);
-}
+// for (let i = 1; i <= 5 ; i++) {
+//     const newLi = document.createElement("li");
+//     newLi.className = "todos-list_item";
+//     newLi.innerText = `Пункт ${i}`;
+//     newUl.append(newLi);
+// }
 // //==========Создали текст(можно и до стилей)===============
 // header.innerHTML = "Это шапка сайта";
 // //==========И в конце добавили(заинжектили) элемент на страницу в нужное место===============
@@ -431,37 +428,53 @@ header.after(section);
 const input = document.createElement("input");
 input.className = "todos-input";
 input.style.marginRight = "10px";
+// input.addEventListener("input", (event) => console.log(event.currentTarget));
+// input.addEventListener("input", (event) => console.log(event.target.value));
+input.addEventListener("input", (event) => console.log(event));
+input.addEventListener("input", () => console.log(input));
+
 section.prepend(input);
 
 const button = document.createElement("button");
 button.className = "Todos-button";
-button.innerText = "кнопка To do";
+button.innerText = "Кнопка Todos-list";
+//button.onclick = () => console.log("clicked");// старый метод добавления события. если добавить еще один, то он перекроет все предыдущие.
+//button.addEventListener('click', () => console.log("clicked"));
+//button.addEventListener('click', () => console.log("clicked"));// не перекрывает предыдущее событие
 input.after(button);
-
 
 const ol = document.createElement("ol");
 ol.className = "Todos-list";
 button.after(ol);
 
-for(let i = 1; i <= 15; i++) {
+function todoThing() {
+  const li = document.createElement("li");
+  li.className = "todos-list__item";
+  li.innerText = input.value;
+  ol.append(li);
+}
+
+button.addEventListener("click", todoThing);
+
+for(let i = 1; i <= 10; i++) {
     const li = document.createElement("li");
     li.className = "todos-list__item";
     li.innerText = `Пункт № ${i}`;
     ol.append(li);
 };
 
+// События - всё сверху в практике
+// разобраться со всплытием!!!!!!!!!!!!!!!
+//event.stopPropagation() останавливает всплытие
+//event.stopImmediatePropagation() тоже останавливает, но по-другому. найти как!!!!
 
+// //event.preventDefault
+// const a = document.querySelector("a");
+// a.innerText = "Ссылка";
+// a.addEventListener("click", (event) => {
+//     event.preventDefault();
+//     console.log("clicked");
+// });
+// console.log(a);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Практика
